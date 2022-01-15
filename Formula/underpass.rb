@@ -5,20 +5,20 @@
 class Underpass < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cjdenio/underpass/releases/download/v0.0.2/underpass_0.0.2_Darwin_arm64.tar.gz"
-      sha256 "3f6e12820130a2a4a21d6eda42ebfcba597f4fdacaa226d4d6eb6ce6587fabaa"
+    if Hardware::CPU.intel?
+      url "https://github.com/cjdenio/underpass/releases/download/v0.0.3/underpass_0.0.3_Darwin_x86_64.tar.gz"
+      sha256 "e94a75de3db089c0c41308b86ac9bf5512c32859d49f62f28338f685e78ba66a"
 
       def install
         bin.install "underpass"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cjdenio/underpass/releases/download/v0.0.2/underpass_0.0.2_Darwin_x86_64.tar.gz"
-      sha256 "3750ea214d5ddd9c51ade2ae0a82fc09a1c75514ea196d9c8bea755f44ce8962"
+    if Hardware::CPU.arm?
+      url "https://github.com/cjdenio/underpass/releases/download/v0.0.3/underpass_0.0.3_Darwin_arm64.tar.gz"
+      sha256 "e8a6e742f773bd7caba9a3a5e96d4540504496888628ddb7ff563e2c149f17cc"
 
       def install
         bin.install "underpass"
@@ -28,16 +28,16 @@ class Underpass < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cjdenio/underpass/releases/download/v0.0.2/underpass_0.0.2_Linux_arm64.tar.gz"
-      sha256 "76cfee7478c1f5a8f80aeb29c30200accbc2f3f9b24d58c7835d75c2aa9a5a94"
+      url "https://github.com/cjdenio/underpass/releases/download/v0.0.3/underpass_0.0.3_Linux_arm64.tar.gz"
+      sha256 "5e7f3b18ea4b4fa8f081542e4625a745a881107e122f3d9a6830967c7e70707c"
 
       def install
         bin.install "underpass"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cjdenio/underpass/releases/download/v0.0.2/underpass_0.0.2_Linux_x86_64.tar.gz"
-      sha256 "ddb0399c7869c2690d4f88d6d15874c1e253b29349649410280bc292c457b008"
+      url "https://github.com/cjdenio/underpass/releases/download/v0.0.3/underpass_0.0.3_Linux_x86_64.tar.gz"
+      sha256 "6009d6bfa164685beab7286017e73c6ab38da4cf05745c9e70a8bc7fd6624f30"
 
       def install
         bin.install "underpass"
